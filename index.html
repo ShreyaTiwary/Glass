@@ -4,132 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glass and I</title>
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #0f0f14;
+      font-family: Arial, sans-serif;
       color: #eaeaea;
+      background: linear-gradient(180deg, #0f0f14, #151522);
       line-height: 1.6;
     }
 
     header {
-      padding: 80px 20px;
+      padding: 100px 20px 60px;
       text-align: center;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
-    header p {
+    h1 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    p.subtitle {
       font-size: 1.2rem;
       opacity: 0.85;
+    }
+
+    nav {
+      margin-top: 25px;
+    }
+
+    nav a {
+      color: #9ad1ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
       color: #9ad1ff;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .card {
-      background: #1b1b24;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: #9ad1ff;
+      color: #0f0f14;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    a.link {
+      color: #9ad1ff;
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
       padding: 40px;
-      opacity: 0.7;
+      opacity: 0.6;
       font-size: 0.9rem;
-    }
-
-    a {
-      color: #9ad1ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Glass and I: The Toxic, Yet Loved Relationship</h1>
-    <p>Computational Chemist | PhD Researcher | Glass Enthusiast (unfortunately)</p>
-  </header>
+<header id="home">
+  <h1>
+    <a href="#home">Glass and I: The Toxic, Yet Loved Relationship</a>
+  </h1>
 
-  <section>
-    <h2>👋 About Me</h2>
-    <div class="card">
-      <p>
-        I am a PhD researcher working at the intersection of chemistry, physics, and computation.
-        My research focuses on the temperature-dependent behavior of glass and nanoparticles.
-      </p>
-      <p>
-        I use molecular simulations and coding (Python, Fortran, Bash) to study systems that are otherwise difficult to capture through experiments.
-      </p>
-      <p>
-        Outside research, I enjoy anime, The Office (on a near-daily loop for the past seven years), and occasionally overthinking my life choices.
-      </p>
-    </div>
-  </section>
+  <p class="subtitle">Computational Chemist | PhD Researcher | Glass Enthusiast (unfortunately)</p>
 
-  <section>
-    <h2>🔬 Research</h2>
-    <div class="card">
-      <p><b>Focus Areas:</b></p>
-      <ul>
-        <li>Temperature-dependent glassy dynamics</li>
-        <li>Structural relaxation in amorphous systems</li>
-        <li>Nanoparticle interactions in glassy matrices</li>
-      </ul>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#work">Current Work</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-      <p><b>Tools:</b> LAMMPS, GROMACS, Python, Fortran, Bash</p>
+<section id="about">
+  <h2>👋 About Me</h2>
+  <div class="card">
+    <p>
+      I am a PhD researcher working at the intersection of chemistry, physics, and computation.
+      My research focuses on the temperature-dependent behavior of glass and nanoparticles.
+    </p>
+    <p>
+      I use molecular simulations and coding (Python, Fortran, Bash) to study systems that are otherwise difficult to capture through experiments.
+    </p>
+    <p>
+      Outside research, I enjoy anime, The Office (on a near-daily loop for the past seven years), and occasionally overthinking my life choices.
+    </p>
+  </div>
+</section>
 
-      <p>
-        Glass looks solid, but behaves like a very slow liquid. I study how it changes with temperature—and why it sometimes acts unpredictably.
-      </p>
-      <p>
-        Glass doesn’t forget its past, and I study why.
-      </p>
-    </div>
-  </section>
+<section id="research">
+  <h2>🔬 Research</h2>
+  <div class="card">
+    <p><b>Focus Areas:</b></p>
+    <ul>
+      <li>Temperature-dependent glassy dynamics</li>
+      <li>Structural relaxation in amorphous systems</li>
+      <li>Nanoparticle interactions in glassy matrices</li>
+    </ul>
 
-  <section>
-    <h2>🚀 Current Work</h2>
-    <div class="card">
-      <p>
-        Exploring temperature-dependent structural relaxation in glass systems and how microscopic dynamics evolve with cooling.
-      </p>
-    </div>
-  </section>
+    <p><b>Tools:</b> LAMMPS, GROMACS, Python, Fortran, Bash</p>
 
-  <section>
-    <h2>📫 Contact</h2>
-    <div class="card">
-      <p>Want to talk more about it? I’d love to chat.</p>
-      <p>Email: Shreya.Tiwary@usask.ca</p>
-      <p>LinkedIn: http://linkedin.com/in/shreya-tiwary-8949a4238</p>
-    </div>
-  </section>
+    <p>
+      Glass looks solid, but behaves like a very slow liquid. I study how it changes with temperature—and why it sometimes acts unpredictably.
+    </p>
 
-  <footer>
-    <p>© 2026 Glass and I — Built by Shreya Tiwary</p>
-  </footer>
+    <p>
+      Glass doesn’t forget its past, and I study why.
+    </p>
+  </div>
+</section>
+
+<section id="work">
+  <h2>🚀 Current Work</h2>
+  <div class="card">
+    <p>
+      Exploring temperature-dependent structural relaxation in glass systems and how microscopic dynamics evolve with cooling.
+    </p>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>📚 Publications & Work</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <b>Glassy dynamics and a growing structural length scale in supercooled nanoparticles.</b> (2025)
+        <br/>
+        <a class="link" href="https://pubs.aip.org/aip/jcp/article/163/8/084505/3360117/Glassy-dynamics-and-a-growing-structural-length" target="_blank">Read paper</a>
+      </li>
+      <br/>
+      <li>
+        <b>Effects of non-essential amino acids on D-glucose to control diabetes: DFT approach.</b> (2022)
+        <br/>
+        <a class="link" href="https://pubmed.ncbi.nlm.nih.gov/35076787/" target="_blank">Read paper</a>
+      </li>
+      <br/>
+      <li>
+        <b>Temperature-dependent glassy dynamics in glycerol.</b> (In Preparation)
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>📫 Contact</h2>
+  <div class="card">
+    <p>Want to talk more about it? I’d love to chat.</p>
+
+    <p><b>Email:</b> Shreya.Tiwary@usask.ca</p>
+
+    <p><b>LinkedIn:</b></p>
+    <a class="btn" href="http://linkedin.com/in/shreya-tiwary-8949a4238" target="_blank">Connect on LinkedIn</a>
+
+    <br/><br/>
+    <a class="btn" href="mailto:Shreya.Tiwary@usask.ca">Send Email</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Glass and I — Built by Shreya Tiwary
+</footer>
 
 </body>
 </html>
